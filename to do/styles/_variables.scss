@@ -3,12 +3,14 @@
 :root {
   --color-light: #ffe3e3;
   --color-light-text: #789dbc;
-  --color-dark: #213555;
+  --color-dark: #191820;
   --color-links: #a888b5;
+  --color-button: #1d4a92;
+  --color-button-bg: rgba(168, 136, 181, 0.5);
 
   --font: "Roboto";
 
   --border-50: 50%;
 
-  --transition-duration: 0.2;
+  --transition-duration: 0.2s;
 }

@@ -111,28 +111,28 @@ svg * {
 }
 @font-face {
   font-family: "Roboto";
-  src: url("/fonts/Roboto-Bold.woff2") format("woff2");
+  src: url("/to do/fonts/Roboto-Bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Roboto";
-  src: url("/fonts/Roboto-Italic.woff2") format("woff2");
+  src: url("/to do/fonts/Roboto-Italic.woff2") format("woff2");
   font-weight: normal;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "Roboto";
-  src: url("/fonts/Roboto-Medium.woff2") format("woff2");
+  src: url("/to do/fonts/Roboto-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Roboto";
-  src: url("/fonts/Roboto-Regular.woff2") format("woff2");
+  src: url("/to do/fonts/Roboto-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -140,11 +140,13 @@ svg * {
 :root {
   --color-light: #ffe3e3;
   --color-light-text: #789dbc;
-  --color-dark: #213555;
+  --color-dark: #191820;
   --color-links: #a888b5;
+  --color-button: #1d4a92;
+  --color-button-bg: rgba(168, 136, 181, 0.5);
   --font: "Roboto";
   --border-50: 50%;
-  --transition-duration: 0.2;
+  --transition-duration: 0.2s;
 }
 
 .container {
@@ -186,6 +188,11 @@ body {
   font-family: var(--font);
   font-weight: normal;
   line-height: 1.2;
+}
+
+body.dark-theme {
+  background-color: var(--color-dark);
+  color: var(--color-light);
 }
 
 h1,
@@ -278,16 +285,39 @@ svg * {
   margin-right: auto;
 }
 .header__theme {
+  min-width: 4.375rem;
+  height: 1.875rem;
   position: relative;
   outline: 1px solid var(--color-links);
+  border-radius: 1.25rem;
 }
 .header__theme-checkbox {
   opacity: 0;
   visibility: hidden;
 }
-.header__theme_text {
+.header__theme-checkbox:checked + .header__theme-switcher {
+  background-color: var(--color-light);
+  translate: 2.5rem;
+  transition-duration: var(--transition-duration);
+}
+.header__theme-switcher {
+  width: 1.25rem;
+  height: 1.25rem;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
+  left: 0.3125rem;
+  top: 0.3125rem;
+  border-radius: var(--border-50);
+  display: inline-block;
+  background-color: var(--color-dark);
+  transition-duration: var(--transition-duration);
+}
+.header__reg {
+  font-size: clamp(1rem, 0.9470108696rem + 0.2173913043vw, 1.125rem);
+  color: var(--color-links);
+  font-weight: bold;
+  border: none;
+  padding: 0.625rem;
+  outline: 1px solid var(--color-links);
+  border-radius: 0.5rem;
+  white-space: nowrap;
 }/*# sourceMappingURL=main.css.map */

@@ -8,6 +8,10 @@ body {
   font-weight: normal;
   line-height: 1.2;
 }
+body.dark-theme {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
 h1,
 .h1 {
   @include fluid-text(28, 26);

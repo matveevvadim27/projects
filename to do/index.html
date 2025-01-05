@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/main.css" />
-    <script src="scripts/script.js" defer></script>
+    <script src="scripts/script.js" type="module" defer></script>
     <title>TO DO</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header" data-js-header>
       <div class="header__inner container">
         <a href="" class="header__logo"
           ><svg
-            width="86"
-            height="16"
+            width="106"
+            height="36"
             viewBox="0 0 86 16"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -25,8 +25,11 @@
           </svg>
         </a>
         <label class="header__theme">
-          <input class="header__theme-checkbox" type="checkbox" />
-          <span class="header__theme-text">light</span>
+          <input
+            class="header__theme-checkbox"
+            type="checkbox"
+            data-js-theme-switcher
+          />
           <span class="header__theme-switcher"></span>
         </label>
         <button class="header__reg">Log In</button>
