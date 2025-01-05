@@ -1,0 +1,111 @@
+body {
+  font-family: "Roboto";
+  background: rgb(104, 85, 138);
+}
+button:focus,
+button:active,
+input:active,
+input:focus {
+  border: 1px solid #000;
+  outline: none;
+}
+button:active {
+  transition-duration: 0.2s;
+  scale: 0.9;
+}
+button:hover {
+  box-shadow: 0px 0px 7px 1px #948787;
+}
+button,
+input {
+  border: 1px solid #000;
+}
+.main {
+  max-width: 30rem;
+  padding: 2rem;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calc-wrapper {
+  border: 1px solid black;
+  padding: 20px;
+  background-color: rgb(216, 211, 203);
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px 4px #1a1818;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+}
+.result {
+  text-align: end;
+  padding: 10px;
+}
+.calc-button {
+  padding: 10px;
+  background-color: rgb(187, 245, 245);
+}
+.delete-button,
+.clear-button {
+  background-color: rgb(255, 88, 88);
+}
+.result {
+  grid-area: 1 / 1 / 2 / 6;
+}
+.number-9 {
+  grid-area: 2 / 3 / 3 / 4;
+}
+.number-8 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+.number-7 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.number-6 {
+  grid-area: 3 / 3 / 4 / 4;
+}
+.number-5 {
+  grid-area: 3 / 2 / 4 / 3;
+}
+.number-4 {
+  grid-area: 3 / 1 / 4 / 2;
+}
+.number-3 {
+  grid-area: 4 / 3 / 5 / 4;
+}
+.number-2 {
+  grid-area: 4 / 2 / 5 / 3;
+}
+.number-1 {
+  grid-area: 4 / 1 / 5 / 2;
+}
+.divide {
+  grid-area: 2 / 4 / 3 / 5;
+}
+.multiply {
+  grid-area: 2 / 5 / 3 / 6;
+}
+.add {
+  grid-area: 3 / 4 / 4 / 5;
+}
+.subtract {
+  grid-area: 3 / 5 / 4 / 6;
+}
+.clear-button {
+  grid-area: 4 / 4 / 6 / 5;
+}
+.equal-button {
+  grid-area: 4 / 5 / 6 / 6;
+}
+.dot-button {
+  grid-area: 5 / 3 / 6 / 4;
+}
+.number-0 {
+  grid-area: 5 / 2 / 6 / 3;
+}
+.delete-button {
+  grid-area: 5 / 1 / 6 / 2;
+}
