@@ -4,6 +4,4 @@
 @use "./utils";
 @use "./globals";
 
-body {
-  background-color: red;
-}
+@use "./blocks/header";

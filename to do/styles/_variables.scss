@@ -1,1 +1,14 @@
 @use "./helpers/" as *;
+
+:root {
+  --color-light: #ffe3e3;
+  --color-light-text: #789dbc;
+  --color-dark: #213555;
+  --color-links: #a888b5;
+
+  --font: "Roboto";
+
+  --border-50: 50%;
+
+  --transition-duration: 0.2;
+}

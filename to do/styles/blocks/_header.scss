@@ -1,0 +1,26 @@
+@use "../helpers/" as *;
+
+.header {
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: rem(20);
+    padding: rem(20) rem(15);
+  }
+
+  &__logo {
+    margin-right: auto;
+  }
+
+  &__theme {
+    position: relative;
+    outline: 1px solid var(--color-links);
+
+    &-checkbox {
+      @include hide;
+    }
+    &_text {
+      @include abs-center;
+    }
+  }
+}
