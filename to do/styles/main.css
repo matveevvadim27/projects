@@ -339,6 +339,9 @@ svg * {
   flex-direction: column;
   gap: 0.625rem;
 }
+.main .nav__item {
+  transition: transform 0.5s ease;
+}
 .main .nav__item-btn {
   width: 90%;
   height: 2.5rem;
@@ -365,7 +368,7 @@ svg * {
   outline: 0.0625rem solid var(--color-links);
   border-radius: 0.625rem;
 }
-.main .todo__item-radio {
+.main .todo__item-checkbox {
   margin-right: 0.625rem;
 }
 .main .todo .done {

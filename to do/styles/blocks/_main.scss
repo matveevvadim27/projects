@@ -16,6 +16,8 @@
       gap: rem(10);
     }
     &__item {
+      transition: transform 0.5s ease;
+
       &-btn {
         width: 90%;
         height: rem(40);
@@ -49,7 +51,7 @@
       outline: rem(1) solid var(--color-links);
       border-radius: rem(10);
 
-      &-radio {
+      &-checkbox {
         margin-right: rem(10);
       }
     }
