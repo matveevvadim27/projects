@@ -138,7 +138,7 @@ svg * {
   font-display: swap;
 }
 :root {
-  --color-light: #ffe3e3;
+  --color-light: #f5f5f5;
   --color-light-text: #789dbc;
   --color-dark: #191820;
   --color-links: #a888b5;
