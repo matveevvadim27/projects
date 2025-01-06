@@ -366,6 +366,11 @@ svg * {
   padding: 0rem 0rem;
   margin-top: 0rem;
 }
+.main .todo__list.visually-hidden + .todo__list-done {
+  border-top: none;
+  padding: 0rem 0rem;
+  margin-top: 0rem;
+}
 .main .todo__list-done {
   display: flex;
   flex-direction: column;
@@ -408,10 +413,11 @@ svg * {
 .main .todo__create-input {
   border: 0.0625rem solid var(--color-links);
   flex-grow: 1;
+  border-radius: 0.625rem;
+  padding: 0.625rem;
 }
 .main .todo__create-input:focus-visible {
   outline: none;
-  border: 0.0625rem solid #69e7dd;
   transition-duration: var(--transition-duration);
 }
 .main .todo__create-button {

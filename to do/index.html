@@ -40,13 +40,13 @@
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
-              <button class="nav__item-btn">Today</button>
+              <button class="nav__item-btn" data-js-today>Today</button>
             </li>
             <li class="nav__item">
-              <button class="nav__item-btn">Planned</button>
+              <button class="nav__item-btn" data-js-planned>Planned</button>
             </li>
             <li class="nav__item">
-              <button class="nav__item-btn">Done</button>
+              <button class="nav__item-btn" data-js-done>Done</button>
             </li>
           </ul>
         </nav>
@@ -54,7 +54,12 @@
           <ul class="todo__list" data-js-todo-list></ul>
           <ul class="todo__list-done" data-js-done-list></ul>
           <div class="todo__create">
-            <input type="text" class="todo__create-input" data-js-todo-input />
+            <input
+              type="text"
+              class="todo__create-input"
+              placeholder="Make your day better..."
+              data-js-todo-input
+            />
             <button class="todo__create-button" data-js-create-button>
               Create
             </button>

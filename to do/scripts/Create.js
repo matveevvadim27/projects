@@ -5,6 +5,9 @@ class Create {
     doneListElement: "[data-js-done-list]",
     todoInputElement: "[data-js-todo-input]",
     createButtonElement: "[data-js-create-button]",
+    todayButtonElement: "[data-js-today]",
+    plannedButtonElement: "[data-js-planned]",
+    doneButtonElement: "[data-js-done]",
   };
 
   stateClasses = {
@@ -25,6 +28,15 @@ class Create {
     this.doneListElement = this.rootElement.querySelector(
       this.selectors.doneListElement
     );
+    this.todayButtonElement = document.querySelector(
+      this.selectors.todayButtonElement
+    );
+    this.plannedButtonElement = document.querySelector(
+      this.selectors.plannedButtonElement
+    );
+    this.doneButtonElement = document.querySelector(
+      this.selectors.doneButtonElement
+    );
 
     this.tasks = this.loadTasksFromLocalStorage(); // Загрузка задач из localStorage
     this.renderTasks(); // Отображение задач на странице
@@ -32,6 +44,7 @@ class Create {
     this.onCreateButtonClick();
     this.addCheckboxEventListener();
     this.deleteTask();
+    this.switcherTask();
   }
 
   // Метод для загрузки задач из localStorage
@@ -194,6 +207,21 @@ class Create {
         // Удаление задачи с экрана
         itemElement.remove();
       }
+    });
+  }
+
+  switcherTask() {
+    this.plannedButtonElement.addEventListener("click", () => {
+      this.doneListElement.classList.add("visually-hidden");
+      this.todoListElement.classList.remove("visually-hidden");
+    });
+    this.doneButtonElement.addEventListener("click", () => {
+      this.doneListElement.classList.remove("visually-hidden");
+      this.todoListElement.classList.add("visually-hidden");
+    });
+    this.todayButtonElement.addEventListener("click", () => {
+      this.doneListElement.classList.remove("visually-hidden");
+      this.todoListElement.classList.remove("visually-hidden");
     });
   }
 }
