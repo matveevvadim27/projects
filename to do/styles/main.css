@@ -144,7 +144,7 @@ svg * {
   --color-links: #a888b5;
   --color-button: #1d4a92;
   --color-button-bg: rgba(168, 136, 181, 0.5);
-  --color-outline-done: #97959c;
+  --color-outline-done: #69e7dd;
   --color-bg-done: #92919642;
   --font: "Roboto";
   --border-50: 50%;
@@ -354,19 +354,45 @@ svg * {
 .main .todo {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   padding: 0rem 1.25rem;
   flex-grow: 4;
 }
 .main .todo__list {
   display: flex;
   flex-direction: column;
-  gap: 0.625rem;
+}
+.main .todo__list:empty + .todo__list-done {
+  border-top: none;
+  padding: 0rem 0rem;
+  margin-top: 0rem;
+}
+.main .todo__list-done {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem 0rem;
+  border-top: 0.0625rem solid var(--color-links);
+  margin-top: 3.125rem;
+}
+.main .todo__list-done:empty {
+  border-top: none;
+  margin-top: 0rem;
+  padding: 0rem 0rem;
 }
 .main .todo__item {
+  position: relative;
+  margin-bottom: 0.625rem;
   padding: 1.25rem 0.625rem;
   outline: 0.0625rem solid var(--color-links);
   border-radius: 0.625rem;
+  transition: transform 0.5s ease;
+}
+.main .todo__item-delete {
+  position: absolute;
+  top: 0.3125rem;
+  right: 0.625rem;
+  padding: 0.3125rem;
+  border: none;
+  background-color: transparent;
 }
 .main .todo__item-checkbox {
   margin-right: 0.625rem;
@@ -374,12 +400,10 @@ svg * {
 .main .todo .done {
   text-decoration: line-through;
   outline: 0.0625rem solid var(--color-outline-done);
-  background-color: var(--color-bg-done);
 }
 .main .todo__create {
   display: flex;
   gap: 0.625rem;
-  margin-top: 0.625rem;
 }
 .main .todo__create-input {
   border: 0.0625rem solid var(--color-links);
