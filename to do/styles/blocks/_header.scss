@@ -1,6 +1,8 @@
 @use "../helpers/" as *;
 
 .header {
+  border-bottom: rem(1) solid var(--color-links);
+  margin-bottom: rem(40);
   &__inner {
     display: flex;
     align-items: center;
@@ -16,7 +18,7 @@
     min-width: rem(70);
     height: rem(30);
     position: relative;
-    outline: 1px solid var(--color-links);
+    outline: rem(1) solid var(--color-links);
     border-radius: rem(20);
 
     &-checkbox {
@@ -46,7 +48,7 @@
     font-weight: bold;
     border: none;
     padding: rem(10);
-    outline: 1px solid var(--color-links);
+    outline: rem(1) solid var(--color-links);
     border-radius: rem(8);
     white-space: nowrap;
   }

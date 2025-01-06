@@ -1,0 +1,85 @@
+@use "../helpers/" as *;
+
+.main {
+  flex-grow: 1;
+  &__sections {
+    display: flex;
+  }
+
+  .nav {
+    flex-grow: 1;
+    border-right: rem(1) solid var(--color-links);
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: rem(10);
+    }
+    &__item {
+      &-btn {
+        width: 90%;
+        height: rem(40);
+        border: none;
+        outline: rem(1) solid var(--color-links);
+        border-radius: rem(7);
+        background: linear-gradient(
+          325deg,
+          rgba(148, 183, 217, 0.5) 0%,
+          rgba(131, 224, 214, 0.5) 100%
+        );
+        box-shadow: rem(0) rem(0) rem(4) rem(1) rgb(0 0 0 / 50%);
+      }
+    }
+  }
+  .todo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: rem(0) rem(20);
+    flex-grow: 4;
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: rem(10);
+    }
+
+    &__item {
+      padding: rem(20) rem(10);
+      outline: rem(1) solid var(--color-links);
+      border-radius: rem(10);
+
+      &-radio {
+        margin-right: rem(10);
+      }
+    }
+    .done {
+      text-decoration: line-through;
+      outline: rem(1) solid var(--color-outline-done);
+      background-color: var(--color-bg-done);
+    }
+
+    &__create {
+      display: flex;
+      gap: rem(10);
+      margin-top: rem(10);
+
+      &-input {
+        border: rem(1) solid var(--color-links);
+        flex-grow: 1;
+
+        &:focus-visible {
+          outline: none;
+          border: rem(1) solid #69e7dd;
+          transition-duration: var(--transition-duration);
+        }
+      }
+      &-button {
+        padding: rem(10);
+        border: none;
+        outline: rem(1) solid var(--color-links);
+        border-radius: rem(5);
+      }
+    }
+  }
+}
