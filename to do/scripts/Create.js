@@ -114,6 +114,30 @@ class Create {
 
       this.todoInputElement.value = "";
     });
+    document.addEventListener("keyup", (event) => {
+      if (event.key === "Enter") {
+        const inputValue = this.todoInputElement.value.trim();
+        if (inputValue === "") {
+          alert("Please enter a task!");
+          return;
+        }
+
+        // Создание новой задачи
+        const task = {
+          text: inputValue,
+          isDone: false,
+        };
+
+        // Добавление задачи в массив и сохранение в localStorage
+        this.tasks.push(task);
+        this.saveTasksToLocalStorage();
+
+        // Отображение новой задачи на странице
+        this.renderTasks();
+
+        this.todoInputElement.value = "";
+      }
+    });
   }
 
   addCheckboxEventListener() {
