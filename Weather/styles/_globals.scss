@@ -1,0 +1,78 @@
+@use "./helpers/" as *;
+
+body {
+  @include fluid-text(16, 14);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-light);
+  color: var(--color-light-text);
+  font-family: var(--font);
+  font-weight: normal;
+  line-height: 1.2;
+}
+body.dark-theme {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+h1,
+.h1 {
+  @include fluid-text(28, 26);
+}
+h2,
+.h2 {
+  @include fluid-text(26, 24);
+}
+h3,
+.h3 {
+  @include fluid-text(24, 22);
+}
+h4,
+.h4 {
+  @include fluid-text(22, 20);
+}
+h5,
+.h5 {
+  @include fluid-text(20, 18);
+}
+h6,
+.h6 {
+  @include fluid-text(18, 16);
+}
+
+a {
+  color: inherit;
+
+  @include hover {
+    color: var(--color-links);
+  }
+
+  &[class] {
+    text-decoration: none;
+  }
+}
+
+// :focus-visible {
+//   outline: rem(2) dashed var(--color-links);
+//   outline-offset: rem(4);
+//   transition-duration: 0s !important;
+// }
+
+button {
+  background-color: inherit;
+  color: inherit;
+
+  @include hover {
+    transform: scale(0.9);
+    transition-duration: var(--transition-duration);
+  }
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: var(--transition-duration);
+}
