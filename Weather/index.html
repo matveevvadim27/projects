@@ -10,9 +10,28 @@
   <body>
     <main class="main">
       <div class="container__inner container">
-        <div class="main__input-container">
-          
-        </div>
+        <section class="title">
+          <h1 class="title__greeting">Welcome!</h1>
+          <h2 class="title__intro">
+            Find out about the weather anywhere on the planet.
+          </h2>
+        </section>
+        <section class="search">
+          <div class="search__container">
+            <fieldset class="search__where">
+              <legend class="search__where-title">Where</legend>
+              <input type="text" class="search__where-input" data-js-input />
+              <button class="search__where-button">Search</button>
+            </fieldset>
+            <fieldset class="search__time">
+              <legend class="search__time-title">Local time</legend>
+              <time class="search__time-time" data-js-time></time>
+            </fieldset>
+          </div>
+          <button class="search__local-button" data-js-local>
+            Estonia, Tallinn
+          </button>
+        </section>
       </div>
     </main>
   </body>

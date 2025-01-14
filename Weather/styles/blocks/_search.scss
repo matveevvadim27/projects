@@ -1,0 +1,48 @@
+@use "../helpers/" as *;
+
+.search {
+  width: 100%;
+  &__container {
+    width: 100%;
+    padding: rem(15);
+    border-radius: rem(15);
+    background-color: var(--color-accent);
+    display: flex;
+  }
+
+  &__where {
+    width: 80%;
+    padding: rem(10);
+    white-space: nowrap;
+
+    &-input {
+      width: 90%;
+      padding: rem(5);
+      border: none;
+      border-radius: rem(10);
+
+      &:focus {
+        transition-duration: --transition-duration;
+        outline: rem(2) solid #1346b3;
+      }
+    }
+    &-button {
+      width: 10%;
+      padding: rem(5);
+      border: none;
+      border-radius: rem(5);
+      outline: rem(2) solid #1346b3;
+    }
+  }
+  &__time {
+    width: 20%;
+    padding: rem(10);
+
+    &-time {
+      padding: rem(5);
+      border-radius: rem(10);
+      color: var(--color-dark);
+      background-color: var(--color-white);
+    }
+  }
+}

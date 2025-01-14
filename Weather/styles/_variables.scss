@@ -1,18 +1,13 @@
 @use "./helpers/" as *;
 
 :root {
-  --color-light: #f5f5f5;
-  --color-light-text: #789dbc;
-  --color-dark: #191820;
-  --color-links: #a888b5;
-  --color-button: #1d4a92;
-  --color-button-bg: rgba(168, 136, 181, 0.5);
-  --color-outline-done: #69e7dd;
-  --color-bg-done: #92919642;
+  --color-bg: #213555;
+  --color-white: #ffffff;
+  --color-accent: #5385d4;
+  --color-dark: #000000;
 
-  --font: "Roboto";
-
-  --border-50: 50%;
+  --font-family: "Inter";
+  --font-title: "JetBrains Mono";
 
   --transition-duration: 0.2s;
 }
