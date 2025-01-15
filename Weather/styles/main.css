@@ -332,4 +332,10 @@ svg * {
   border-radius: 0.625rem;
   color: var(--color-dark);
   background-color: var(--color-white);
+}
+
+.result__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }/*# sourceMappingURL=main.css.map */
