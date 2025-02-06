@@ -4,19 +4,36 @@
   flex-grow: 1;
   &__sections {
     display: flex;
+
+    @include tablet-s {
+      flex-direction: column;
+    }
   }
 
   .nav {
     flex-grow: 1;
-    border-right: rem(1) solid var(--color-links);
+    border-right: rem(1) solid var(--color-outline);
+
+    @include tablet-s {
+      border-right: none;
+      margin-bottom: rem(20);
+    }
 
     &__list {
       display: flex;
       flex-direction: column;
       gap: rem(10);
+
+      @include tablet-s {
+        flex-direction: row;
+        justify-content: space-between;
+      }
     }
     &__item {
       transition: transform 0.5s ease;
+      @include tablet-s {
+        flex-grow: 1;
+      }
 
       &-btn {
         width: 90%;
@@ -24,11 +41,7 @@
         border: none;
         outline: rem(1) solid var(--color-links);
         border-radius: rem(7);
-        background: linear-gradient(
-          325deg,
-          rgba(148, 183, 217, 0.5) 0%,
-          rgba(131, 224, 214, 0.5) 100%
-        );
+        background: var(--color-gradient);
         box-shadow: rem(0) rem(0) rem(4) rem(1) rgb(0 0 0 / 50%);
       }
     }
@@ -38,6 +51,9 @@
     flex-direction: column;
     padding: rem(0) rem(20);
     flex-grow: 4;
+    @include tablet-s {
+      padding: 0;
+    }
 
     &__list {
       display: flex;

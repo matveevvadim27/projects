@@ -10,10 +10,6 @@ class Switcher {
 
   constructor() {
     this.rootElement = document.querySelector(this.selectors.root);
-    if (!this.rootElement) {
-      console.error("Root element not found.");
-      return;
-    }
 
     this.themeSwitcherElement = this.rootElement.querySelector(
       this.selectors.themeSwitcher

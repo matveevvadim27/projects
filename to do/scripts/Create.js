@@ -38,8 +38,8 @@ class Create {
       this.selectors.doneButtonElement
     );
 
-    this.tasks = this.loadTasksFromLocalStorage(); // Загрузка задач из localStorage
-    this.renderTasks(); // Отображение задач на странице
+    this.tasks = this.loadTasksFromLocalStorage();
+    this.renderTasks(); //
 
     this.onCreateButtonClick();
     this.addCheckboxEventListener();
@@ -47,25 +47,23 @@ class Create {
     this.switcherTask();
   }
 
-  // Метод для загрузки задач из localStorage
   loadTasksFromLocalStorage() {
     const tasks = JSON.parse(localStorage.getItem("tasks"));
     return tasks ? tasks : [];
   }
 
-  // Метод для сохранения задач в localStorage
   saveTasksToLocalStorage() {
     localStorage.setItem("tasks", JSON.stringify(this.tasks));
   }
 
-  // Метод для отрисовки задач на странице
   renderTasks() {
-    this.todoListElement.innerHTML = ""; // Очищаем список перед рендером
-    this.doneListElement.innerHTML = ""; // Очищаем список выполненных задач
+    this.todoListElement.innerHTML = "";
+    this.doneListElement.innerHTML = "";
 
     this.tasks.forEach((task) => {
       const itemElement = document.createElement("li");
       itemElement.classList.add("todo__item");
+      itemElement.setAttribute("draggable", "true");
       if (task.isDone) itemElement.classList.add(this.stateClasses.isDone);
 
       const checkbox = document.createElement("input");
@@ -82,7 +80,6 @@ class Create {
 
       itemElement.append(checkbox, taskText, deleteButton);
 
-      // Добавляем задачу в соответствующий список
       if (task.isDone) {
         this.doneListElement.appendChild(itemElement);
       } else {
@@ -99,17 +96,14 @@ class Create {
         return;
       }
 
-      // Создание новой задачи
       const task = {
         text: inputValue,
         isDone: false,
       };
 
-      // Добавление задачи в массив и сохранение в localStorage
       this.tasks.push(task);
       this.saveTasksToLocalStorage();
 
-      // Отображение новой задачи на странице
       this.renderTasks();
 
       this.todoInputElement.value = "";
@@ -122,17 +116,14 @@ class Create {
           return;
         }
 
-        // Создание новой задачи
         const task = {
           text: inputValue,
           isDone: false,
         };
 
-        // Добавление задачи в массив и сохранение в localStorage
         this.tasks.push(task);
         this.saveTasksToLocalStorage();
 
-        // Отображение новой задачи на странице
         this.renderTasks();
 
         this.todoInputElement.value = "";
@@ -149,10 +140,8 @@ class Create {
         const itemElement = event.target.closest(".todo__item");
         const index = [...this.todoListElement.children].indexOf(itemElement);
 
-        // Обновление состояния задачи
         this.tasks[index].isDone = event.target.checked;
 
-        // Перемещение задачи в другой список
         if (event.target.checked) {
           this.doneListElement.appendChild(itemElement);
         } else {
@@ -164,7 +153,6 @@ class Create {
           event.target.checked
         );
 
-        // Сохранение обновленных данных в localStorage
         this.saveTasksToLocalStorage();
       }
     });
@@ -177,10 +165,8 @@ class Create {
         const itemElement = event.target.closest(".todo__item");
         const index = [...this.doneListElement.children].indexOf(itemElement);
 
-        // Обновление состояния задачи
         this.tasks[index].isDone = event.target.checked;
 
-        // Перемещение задачи в другой список
         if (event.target.checked) {
           this.doneListElement.appendChild(itemElement);
         } else {
@@ -192,7 +178,6 @@ class Create {
           event.target.checked
         );
 
-        // Сохранение обновленных данных в localStorage
         this.saveTasksToLocalStorage();
       }
     });
@@ -207,11 +192,9 @@ class Create {
         const itemElement = event.target.closest(".todo__item");
         const index = [...this.todoListElement.children].indexOf(itemElement);
 
-        // Удаление задачи из массива и сохранение в localStorage
         this.tasks.splice(index, 1);
         this.saveTasksToLocalStorage();
 
-        // Удаление задачи с экрана
         itemElement.remove();
       }
     });
@@ -224,11 +207,9 @@ class Create {
         const itemElement = event.target.closest(".todo__item");
         const index = [...this.doneListElement.children].indexOf(itemElement);
 
-        // Удаление задачи из массива и сохранение в localStorage
         this.tasks.splice(index, 1);
         this.saveTasksToLocalStorage();
 
-        // Удаление задачи с экрана
         itemElement.remove();
       }
     });

@@ -1,7 +1,7 @@
 @use "../helpers/" as *;
 
 .header {
-  border-bottom: rem(1) solid var(--color-links);
+  border-bottom: rem(1) solid var(--color-outline);
   margin-bottom: rem(40);
   &__inner {
     display: flex;
@@ -41,15 +41,5 @@
       background-color: var(--color-dark);
       transition-duration: var(--transition-duration);
     }
-  }
-  &__reg {
-    @include fluid-text(18, 16);
-    color: var(--color-links);
-    font-weight: bold;
-    border: none;
-    padding: rem(10);
-    outline: rem(1) solid var(--color-links);
-    border-radius: rem(8);
-    white-space: nowrap;
   }
 }

@@ -5,10 +5,17 @@
   --color-light-text: #789dbc;
   --color-dark: #191820;
   --color-links: #a888b5;
-  --color-button: #1d4a92;
-  --color-button-bg: rgba(168, 136, 181, 0.5);
+  --color-button-bg: rgba(168, 136, 181, 1);
   --color-outline-done: #69e7dd;
   --color-bg-done: #92919642;
+  --color-body-dark: #2d3250;
+  --color-outline: #7077a1;
+
+  --color-gradient: linear-gradient(
+    325deg,
+    rgba(148, 183, 217, 0.5) 0%,
+    rgba(131, 224, 214, 0.5) 100%
+  );
 
   --font: "Roboto";
 
