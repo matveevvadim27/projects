@@ -16,11 +16,16 @@
             Find out about the weather anywhere on the planet.
           </h2>
         </section>
-        <section class="search">
+        <section class="search" data-js-weather>
           <div class="search__container">
             <fieldset class="search__where">
               <legend class="search__where-title">Where</legend>
-              <input type="text" class="search__where-input" data-js-input />
+              <input
+                type="text"
+                class="search__where-input"
+                placeholder="City"
+                data-js-input
+              />
               <button class="search__where-button" data-js-search>
                 Search
               </button>
@@ -30,17 +35,16 @@
               <time class="search__time-time" data-js-time></time>
             </fieldset>
           </div>
-          <button class="search__local-button" data-js-local>Tallinn</button>
+          <button class="search__button" data-js-local></button>
         </section>
-        <section class="result">
-          <div class="result__header">
+        <section class="result" data-js-result-section>
+          <div class="result__card" data-js-card>
             <h3 class="result__city" data-js-city></h3>
-            <time class="result__time" data-js-localTime></time>
+            <h4 class="result__temp" data-js-temp></h4>
+            <p class="result__feels" data-js-feels></p>
+            <p class="result__humidity" data-js-humidity></p>
+            <p class="result__main" data-js-main></p>
           </div>
-          <h3 class="result__temp" data-js-temp></h3>
-          <p class="result__feels" data-js-feels></p>
-          <p class="result__humidity" data-js-humidity></p>
-          <p class="result__main" data-js-main></p>
         </section>
       </div>
     </main>

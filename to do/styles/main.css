@@ -187,36 +187,6 @@ body.dark-theme {
   color: var(--color-light);
 }
 
-h1,
-.h1 {
-  font-size: clamp(1.625rem, 1.5720108696rem + 0.2173913043vw, 1.75rem);
-}
-
-h2,
-.h2 {
-  font-size: clamp(1.5rem, 1.4470108696rem + 0.2173913043vw, 1.625rem);
-}
-
-h3,
-.h3 {
-  font-size: clamp(1.375rem, 1.3220108696rem + 0.2173913043vw, 1.5rem);
-}
-
-h4,
-.h4 {
-  font-size: clamp(1.25rem, 1.1970108696rem + 0.2173913043vw, 1.375rem);
-}
-
-h5,
-.h5 {
-  font-size: clamp(1.125rem, 1.0720108696rem + 0.2173913043vw, 1.25rem);
-}
-
-h6,
-.h6 {
-  font-size: clamp(1rem, 0.9470108696rem + 0.2173913043vw, 1.125rem);
-}
-
 a {
   color: inherit;
 }
@@ -280,10 +250,6 @@ svg * {
   position: relative;
   outline: 0.0625rem solid var(--color-links);
   border-radius: 1.25rem;
-}
-.header__theme-checkbox {
-  opacity: 0;
-  visibility: hidden;
 }
 .header__theme-checkbox:checked + .header__theme-switcher {
   background-color: var(--color-light);

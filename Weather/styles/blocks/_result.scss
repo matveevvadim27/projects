@@ -1,9 +1,14 @@
 @use "../helpers/" as *;
 
 .result {
-  &__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  &:empty {
+    @include visually-hidden;
+  }
+  &__card {
+    padding: rem(20);
+
+    &:empty {
+      @include visually-hidden;
+    }
   }
 }

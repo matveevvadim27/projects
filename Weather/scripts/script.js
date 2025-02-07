@@ -1,12 +1,7 @@
-import { updateTime } from "./time.js";
-import { localCityElement, inputCityElement, getWeather } from "./search.js";
+import Location from "./Location.js";
+import Time from "./Time.js";
+import Search from "./Search.js";
 
-updateTime();
-setInterval(updateTime, 1000);
-
-const searchButtonElement = document.querySelector("[data-js-search]");
-
-searchButtonElement.addEventListener("click", (event) => {
-  event.preventDefault();
-  getWeather();
-});
+new Location();
+new Time();
+new Search();
