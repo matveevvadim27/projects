@@ -47,6 +47,13 @@ class Search {
       event.preventDefault();
       this.getWeather();
     });
+
+    this.inputCityElement.addEventListener("keypress", (event) => {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        this.getWeather();
+      }
+    });
   }
 
   getWeather() {

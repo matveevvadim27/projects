@@ -251,6 +251,10 @@ svg * {
   outline: 0.0625rem solid var(--color-links);
   border-radius: 1.25rem;
 }
+.header__theme-checkbox {
+  opacity: 0;
+  visibility: hidden;
+}
 .header__theme-checkbox:checked + .header__theme-switcher {
   background-color: var(--color-light);
   translate: 2.5rem;
