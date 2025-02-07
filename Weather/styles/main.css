@@ -286,15 +286,15 @@ svg * {
 }
 
 .title {
-  margin-top: clamp(6.25rem, 4.9252717391rem + 5.4347826087vw, 9.375rem);
+  margin-top: clamp(4.375rem, 2.2554347826rem + 8.6956521739vw, 9.375rem);
 }
 .title__greeting {
   text-align: center;
-  margin-bottom: 3.125rem;
+  margin-bottom: clamp(1.875rem, 1.3451086957rem + 2.1739130435vw, 3.125rem);
 }
 .title__intro {
   text-align: center;
-  margin-bottom: 3.125rem;
+  margin-bottom: clamp(1.875rem, 1.3451086957rem + 2.1739130435vw, 3.125rem);
 }
 
 .search {
@@ -368,6 +368,9 @@ svg * {
   border: none;
 }
 
+.result {
+  margin-top: 1.25rem;
+}
 .result:empty {
   position: absolute !important;
   width: 1px !important;

@@ -1,6 +1,7 @@
 @use "../helpers/" as *;
 
 .result {
+  margin-top: rem(20);
   &:empty {
     @include visually-hidden;
   }
